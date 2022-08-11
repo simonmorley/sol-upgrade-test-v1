@@ -10,6 +10,7 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
 contract MyTokenV2 is Initializable, ERC20Upgradeable, UUPSUpgradeable, OwnableUpgradeable {
     uint public num;
+    bool blacklist;
 
     function initialize() public initializer {
         __ERC20_init('MyToken', 'MTK');
@@ -24,4 +25,10 @@ contract MyTokenV2 is Initializable, ERC20Upgradeable, UUPSUpgradeable, OwnableU
     function add(uint _num) public {
       num += _num;
     }
+
+    function transfer(address to, uint256 value) public override returns (bool) {
+        require(blacklist, 'oh-dear');
+        super.transfer(to, value);
+    }
+
 }

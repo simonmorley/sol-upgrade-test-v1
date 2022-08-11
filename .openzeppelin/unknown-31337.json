@@ -163,9 +163,9 @@
         }
       }
     },
-    "a835c3d55bf60bb4e927576c46f155de6800738dada436a92eb3f720f7b1c44a": {
+    "71b6a56f6520bd96dacece03f9f682a70c6e60f11e1511bae768326f54d3a72e": {
       "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-      "txHash": "0xbf73365fc6b8105ad3aec1b1596e4bfb54c9257e5b776bbe29079ee94bcd593a",
+      "txHash": "0x486ba11db657ba63b27e795483313f678c9b5a985c3129d1cfe7f15240382d5b",
       "layout": {
         "storage": [
           {
@@ -280,6 +280,14 @@
             "type": "t_uint256",
             "contract": "MyTokenV2",
             "src": "contracts/MyTokenV2.sol:12"
+          },
+          {
+            "label": "blacklist",
+            "offset": 0,
+            "slot": "252",
+            "type": "t_bool",
+            "contract": "MyTokenV2",
+            "src": "contracts/MyTokenV2.sol:13"
           }
         ],
         "types": {
