@@ -27,31 +27,48 @@ contract MyTokenV1 is Initializable, ERC20Upgradeable, UUPSUpgradeable, OwnableU
     constructor() initializer {}
 
     // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
+    // only ADMIN!!
     function _authorizeUpgrade(address) internal override onlyOwner {}
 
-    // function mint(address to, uint256 amount) public {
-    //     require(hasRole(MINTER_ROLE, msg.sender), "invalid-minter");
-    //     _mint(to, amount);
-    // }
+    function mint(address to, uint256 amount) public {
+        require(hasRole(MINTER_ROLE, msg.sender), "invalid-minter");
+        _mint(to, amount);
+    }
 
-    // function addMinter(address _address) public {
-    //     grantRole(MINTER_ROLE, _address);
-    // }
+    function addMinter(address _address) public {
+        grantRole(MINTER_ROLE, _address);
+    }
 
-    // function removeMinter(address _address) public {
-    //     revokeRole(MINTER_ROLE, _address);
-    // }
+    function removeMinter(address _address) public {
+        revokeRole(MINTER_ROLE, _address);
+    }
 
-    // function burn(address from, uint256 amount) public {
-    //     require(hasRole(BURNER_ROLE, msg.sender), "invalid-burner");
-    //     _burn(from, amount);
-    // }
+    function burn(address from, uint256 amount) public {
+        require(hasRole(BURNER_ROLE, msg.sender), "invalid-burner");
+        _burn(from, amount);
+    }
 
-    // function addBurner(address _address) public {
-    //     grantRole(BURNER_ROLE, _address);
-    // }
+    function addBurner(address _address) public {
+        grantRole(BURNER_ROLE, _address);
+    }
 
-    // function removeBurner(address _address) public {
-    //     revokeRole(BURNER_ROLE, _address);
-    // }
+    function removeBurner(address _address) public {
+        revokeRole(BURNER_ROLE, _address);
+    }
 }
